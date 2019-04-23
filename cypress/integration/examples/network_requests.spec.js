@@ -47,7 +47,7 @@ context('Network Requests', () => {
 
   it('cy.request() - make an XHR request', () => {
     // https://on.cypress.io/request
-    cy.request('https://jsonplaceholder.typicode.com/comments')
+    cy.request('https://jsonplaceholder.cypress.io/comments')
       .should((response) => {
         expect(response.status).to.eq(200)
         expect(response.body).to.have.length(500)
@@ -58,9 +58,9 @@ context('Network Requests', () => {
 
   it('cy.request() with query parameters', () => {
     // will execute request
-    // https://jsonplaceholder.typicode.com/comments?postId=1&id=3
+    // https://jsonplaceholder.cypress.io/comments?postId=1&id=3
     cy.request({
-      url: 'https://jsonplaceholder.typicode.com/comments',
+      url: 'https://jsonplaceholder.cypress.io/comments',
       qs: {
         postId: 1,
         id: 3,
