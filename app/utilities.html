@@ -81,7 +81,7 @@
           <p>To call a lodash method, use the <a href="https://on.cypress.io/api/_"><code>Cypress._.method()</code></a> command.</p>
           <pre><code class="javascript">// use the _.chain, _.map, _.take, and _.value functions
 // https://on.cypress.io/api/_
-cy.request('https://jsonplaceholder.typicode.com/users').then(function(response){
+cy.request('https://jsonplaceholder.cypress.io/users').then(function(response){
   var ids = Cypress._.chain(response.body).map('id').take(3).value()
 
   expect(ids).to.deep.eq([1, 2, 3])

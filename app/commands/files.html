@@ -149,7 +149,7 @@ cy.wait('@getComment').its('responseBody')
         <div class="col-xs-12">
           <h4>cy.writeFile()</h4>
           <p>To write to a file with the specified contents, use the <a href="https://on.cypress.io/api/writefile"><code>cy.writeFile()</code></a> command.</p>
-          <pre><code class="javascript">cy.request('https://jsonplaceholder.typicode.com/users').then(function(response){
+          <pre><code class="javascript">cy.request('https://jsonplaceholder.cypress.io/users').then(function(response){
   cy.writeFile('cypress/fixtures/users.json', response.body)
 })
 cy.fixture('users').should(function(users){

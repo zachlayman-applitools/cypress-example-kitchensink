@@ -940,7 +940,7 @@ describe('Kitchen Sink', function () {
 
     it('cy.request() - make an XHR request', function () {
       // https://on.cypress.io/request
-      cy.request('https://jsonplaceholder.typicode.com/comments')
+      cy.request('https://jsonplaceholder.cypress.io/comments')
         .should(function (response) {
           expect(response.status).to.eq(200)
           expect(response.body).to.have.length(500)
@@ -1071,7 +1071,7 @@ describe('Kitchen Sink', function () {
 
       // Use a response from a request to automatically
       // generate a fixture file for use later
-      cy.request('https://jsonplaceholder.typicode.com/users')
+      cy.request('https://jsonplaceholder.cypress.io/users')
         .then(function (response) {
           // https://on.cypress.io/writefile
           cy.writeFile('cypress/fixtures/users.json', response.body)
@@ -1290,7 +1290,7 @@ describe('Kitchen Sink', function () {
     it('Cypress._.method() - call a lodash method', function () {
       // use the _.chain, _.map, _.take, and _.value functions
       // https://on.cypress.io/_
-      cy.request('https://jsonplaceholder.typicode.com/users')
+      cy.request('https://jsonplaceholder.cypress.io/users')
         .then(function (response) {
           let ids = Cypress._.chain(response.body).map('id').take(3).value()
 

@@ -114,7 +114,7 @@ cy.server({
         <div class="col-xs-7">
           <h4>cy.request()</h4>
           <p>To make an XHR request, use the <a href="https://on.cypress.io/api/request"><code>cy.request()</code></a> command.</p>
-          <pre><code class="javascript">cy.request('https://jsonplaceholder.typicode.com/comments').should(function(response){
+          <pre><code class="javascript">cy.request('https://jsonplaceholder.cypress.io/comments').should(function(response){
   expect(response.status).to.eq(200)
   expect(response.body).to.have.length(500)
   expect(response).to.have.property('headers')
